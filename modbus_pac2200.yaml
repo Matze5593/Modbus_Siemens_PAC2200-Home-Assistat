@@ -1,0 +1,100 @@
+####
+# MODBUS Start
+####
+modbus:
+  # PAC2200 Allgemein     
+  - name: pac2200_allgemein
+    type: tcp
+    host: 192.168.178.115
+    port: 502
+    sensors:
+    - name: pac2200_allgemein_spannungL1
+      unique_id: pac2200_allgemein_spannungL1
+      input_type: holding
+      slave: 1
+      address: 1
+      unit_of_measurement: V
+      count: 2
+      data_type: float32
+            
+    - name: pac2200_allgemein_spannungL2
+      unique_id: pac2200_allgemein_spannungL2
+      input_type: holding
+      slave: 1
+      address: 3
+      unit_of_measurement: V
+      count: 2
+      data_type: float32
+      
+    - name: pac2200_allgemein_spannungL3
+      unique_id: pac2200_allgemein_spannungL3
+      input_type: holding
+      slave: 1
+      address: 5
+      unit_of_measurement: V
+      count: 2
+      data_type: float32
+      
+    - name: pac2200_allgemein_stromL1
+      unique_id: pac2200_allgemein_stromL
+      input_type: holding
+      slave: 1
+      address: 13
+      unit_of_measurement: A
+      count: 2
+      data_type: float32
+      
+    - name: pac2200_allgemein_stromL2
+      unique_id: pac2200_allgemein_stromL2
+      input_type: holding
+      slave: 1
+      address: 15
+      unit_of_measurement: A
+      count: 2
+      data_type: float32
+      
+    - name: pac2200_allgemein_stromL3
+      unique_id: pac2200_allgemein_stromL3
+      input_type: holding
+      slave: 1
+      address: 17
+      unit_of_measurement: A
+      count: 2
+      data_type: float32
+      
+    - name: pac2200_allgemein_frequenz
+      unique_id: pac2200_allgemein_frequenz
+      input_type: holding
+      slave: 1
+      address: 55
+      unit_of_measurement: Hz
+      count: 2
+      data_type: float32
+    
+    - name: pac2200_allgemein_wirkleistung
+      unique_id: pac2200_allgemein_wirkleistung
+      input_type: holding
+      slave: 1
+      address: 65
+      unit_of_measurement: W
+      count: 2
+      data_type: float32
+      
+    - name: pac2200_allgemein_wirkarbeit
+      unique_id: pac2200_allgemein_wirkarbeit
+      input_type: holding
+      slave: 1
+      address: 801
+      unit_of_measurement: kWh
+      device_class: energy
+      state_class: total_increasing
+      count: 4
+      data_type: float64
+      scale: 0.001
+      scan_interval: 60
+
+
+
+#####
+# Modbus ENDE
+#####
